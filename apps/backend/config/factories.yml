@@ -9,10 +9,11 @@ prod:
       loggers: ~
 
 test:
-  storage:
-    class: sfSessionTestStorage
+  mailer:
     param:
-      session_path: %SF_TEST_CACHE_DIR%/sessions
+      delivery_strategy: none
+      transport:
+        class: Swift_MailTransport
 
   response:
     class: sfWebResponse
@@ -20,8 +21,28 @@ test:
       send_http_headers: false
 
   mailer:
+    class: sfMailer
     param:
-      delivery_strategy: none
+      logging: %SF_LOGGING_ENABLED%
+      charset: %SF_CHARSET%
+      delivery_strategy: realtime
+      transport:
+        class: Swift_SmtpTransport
+        param:
+          host: localhost
+          port: 25
+          encryption: ~
+          username: ~
+          password: ~
+
+transport:
+  class: Swift_SmtpTransport
+  param:
+    host:       localhost
+    port:       25
+    encryption: ~
+    username:   ~
+    password:   ~
 
 dev:
   mailer:
