@@ -10,14 +10,14 @@
  * @property JobeetCategory $JobeetCategory
  * @property JobeetAffiliate $JobeetAffiliate
  * 
- * @method integer                 getCategoryId()      Returns the current record's "category_id" value
- * @method integer                 getAffiliateId()     Returns the current record's "affiliate_id" value
- * @method JobeetCategory          getJobeetCategory()  Returns the current record's "JobeetCategory" value
- * @method JobeetAffiliate         getJobeetAffiliate() Returns the current record's "JobeetAffiliate" value
- * @method JobeetCategoryAffiliate setCategoryId()      Sets the current record's "category_id" value
- * @method JobeetCategoryAffiliate setAffiliateId()     Sets the current record's "affiliate_id" value
- * @method JobeetCategoryAffiliate setJobeetCategory()  Sets the current record's "JobeetCategory" value
- * @method JobeetCategoryAffiliate setJobeetAffiliate() Sets the current record's "JobeetAffiliate" value
+ * @method integer                 getstrtoupper('c')ategorystrtoupper('i')d() Returns the current record's "category_id" value
+ * @method integer                 getstrtoupper('a')ffiliatestrtoupper('i')d() Returns the current record's "affiliate_id" value
+ * @method JobeetCategory          getstrtoupper('J')obeetCategory() Returns the current record's "JobeetCategory" value
+ * @method JobeetAffiliate         getstrtoupper('J')obeetAffiliate() Returns the current record's "JobeetAffiliate" value
+ * @method JobeetCategoryAffiliate setstrtoupper('c')ategorystrtoupper('i')d() Sets the current record's "category_id" value
+ * @method JobeetCategoryAffiliate setstrtoupper('a')ffiliatestrtoupper('i')d() Sets the current record's "affiliate_id" value
+ * @method JobeetCategoryAffiliate setstrtoupper('J')obeetCategory() Sets the current record's "JobeetCategory" value
+ * @method JobeetCategoryAffiliate setstrtoupper('J')obeetAffiliate() Sets the current record's "JobeetAffiliate" value
  * 
  * @package    jobeet
  * @subpackage model

@@ -10,14 +10,14 @@
  * @property Doctrine_Collection $JobeetAffiliates
  * @property Doctrine_Collection $JobeetCategoryAffiliate
  * 
- * @method string              getName()                    Returns the current record's "name" value
- * @method Doctrine_Collection getJobeetJobs()              Returns the current record's "JobeetJobs" collection
- * @method Doctrine_Collection getJobeetAffiliates()        Returns the current record's "JobeetAffiliates" collection
- * @method Doctrine_Collection getJobeetCategoryAffiliate() Returns the current record's "JobeetCategoryAffiliate" collection
- * @method JobeetCategory      setName()                    Sets the current record's "name" value
- * @method JobeetCategory      setJobeetJobs()              Sets the current record's "JobeetJobs" collection
- * @method JobeetCategory      setJobeetAffiliates()        Sets the current record's "JobeetAffiliates" collection
- * @method JobeetCategory      setJobeetCategoryAffiliate() Sets the current record's "JobeetCategoryAffiliate" collection
+ * @method string              getstrtoupper('n')ame()      Returns the current record's "name" value
+ * @method Doctrine_Collection getstrtoupper('J')obeetJobs() Returns the current record's "JobeetJobs" collection
+ * @method Doctrine_Collection getstrtoupper('J')obeetAffiliates() Returns the current record's "JobeetAffiliates" collection
+ * @method Doctrine_Collection getstrtoupper('J')obeetCategoryAffiliate() Returns the current record's "JobeetCategoryAffiliate" collection
+ * @method JobeetCategory      setstrtoupper('n')ame()      Sets the current record's "name" value
+ * @method JobeetCategory      setstrtoupper('J')obeetJobs() Sets the current record's "JobeetJobs" collection
+ * @method JobeetCategory      setstrtoupper('J')obeetAffiliates() Sets the current record's "JobeetAffiliates" collection
+ * @method JobeetCategory      setstrtoupper('J')obeetCategoryAffiliate() Sets the current record's "JobeetCategoryAffiliate" collection
  * 
  * @package    jobeet
  * @subpackage model

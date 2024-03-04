@@ -41,11 +41,7 @@ abstract class BaseJobeetAffiliateFormFilter extends BaseFormFilterDoctrine
     parent::setup();
   }
 
-  public function add
-Deprecated: preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in D:\Developmente1\sfprojects\jobeet\lib\vendor\symfony\lib\util\sfToolkit.class.php on line 362
-
-Deprecated: preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in D:\Developmente1\sfprojects\jobeet\lib\vendor\symfony\lib\util\sfToolkit.class.php on line 362
-JobeetCategoriesListColumnQuery(Doctrine_Query $query, $field, $values)
+  public function addstrtoupper('J')obeetCategoriesListColumnQuery(Doctrine_Query $query, $field, $values)
   {
     if (!is_array($values))
     {

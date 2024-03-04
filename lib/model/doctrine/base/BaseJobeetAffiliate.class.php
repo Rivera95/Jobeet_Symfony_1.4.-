@@ -12,18 +12,18 @@
  * @property Doctrine_Collection $JobeetCategories
  * @property Doctrine_Collection $JobeetCategoryAffiliate
  * 
- * @method string              getUrl()                     Returns the current record's "url" value
- * @method string              getEmail()                   Returns the current record's "email" value
- * @method string              getToken()                   Returns the current record's "token" value
- * @method boolean             getIsActive()                Returns the current record's "is_active" value
- * @method Doctrine_Collection getJobeetCategories()        Returns the current record's "JobeetCategories" collection
- * @method Doctrine_Collection getJobeetCategoryAffiliate() Returns the current record's "JobeetCategoryAffiliate" collection
- * @method JobeetAffiliate     setUrl()                     Sets the current record's "url" value
- * @method JobeetAffiliate     setEmail()                   Sets the current record's "email" value
- * @method JobeetAffiliate     setToken()                   Sets the current record's "token" value
- * @method JobeetAffiliate     setIsActive()                Sets the current record's "is_active" value
- * @method JobeetAffiliate     setJobeetCategories()        Sets the current record's "JobeetCategories" collection
- * @method JobeetAffiliate     setJobeetCategoryAffiliate() Sets the current record's "JobeetCategoryAffiliate" collection
+ * @method string              getstrtoupper('u')rl()       Returns the current record's "url" value
+ * @method string              getstrtoupper('e')mail()     Returns the current record's "email" value
+ * @method string              getstrtoupper('t')oken()     Returns the current record's "token" value
+ * @method boolean             getstrtoupper('i')sstrtoupper('a')ctive() Returns the current record's "is_active" value
+ * @method Doctrine_Collection getstrtoupper('J')obeetCategories() Returns the current record's "JobeetCategories" collection
+ * @method Doctrine_Collection getstrtoupper('J')obeetCategoryAffiliate() Returns the current record's "JobeetCategoryAffiliate" collection
+ * @method JobeetAffiliate     setstrtoupper('u')rl()       Sets the current record's "url" value
+ * @method JobeetAffiliate     setstrtoupper('e')mail()     Sets the current record's "email" value
+ * @method JobeetAffiliate     setstrtoupper('t')oken()     Sets the current record's "token" value
+ * @method JobeetAffiliate     setstrtoupper('i')sstrtoupper('a')ctive() Sets the current record's "is_active" value
+ * @method JobeetAffiliate     setstrtoupper('J')obeetCategories() Sets the current record's "JobeetCategories" collection
+ * @method JobeetAffiliate     setstrtoupper('J')obeetCategoryAffiliate() Sets the current record's "JobeetCategoryAffiliate" collection
  * 
  * @package    jobeet
  * @subpackage model
