@@ -1,3 +1,10 @@
 <td colspan="6">
-  <?php echo __('%%is_activated%% <small>%%jobeet_category%%</small> - %%company%% (<em>%%email%%</em>) is looking for a %%position%% (%%location%%))', array('%%is_activated%%' => get_partial('job/list_field_boolean', array('value' => $jobeet_job->getstrtoupper('i')sstrtoupper('a')ctivated())), '%%jobeet_category%%' => $jobeet_job->getstrtoupper('j')obeetstrtoupper('c')ategory(), '%%company%%' => $jobeet_job->getstrtoupper('c')ompany(), '%%email%%' => $jobeet_job->getstrtoupper('e')mail(), '%%position%%' => link_to($jobeet_job->getstrtoupper('p')osition(), 'jobeet_job_edit', $jobeet_job), '%%location%%' => $jobeet_job->getstrtoupper('l')ocation()), 'messages') ?>
+    <?php echo __('%%is_activated%% <small>%%jobeet_category%%</small> - %%company%% (<em>%%email%%</em>) is looking for a %%position%% (%%location%%)', array(
+        '%%is_activated%%' => get_partial('job/list_field_boolean', array('value' => $jobeet_job->isActivated())),
+        '%%jobeet_category%%' => $jobeet_job->getJobeetCategory(),
+        '%%company%%' => strtoupper($jobeet_job->getCompany()),
+        '%%email%%' => $jobeet_job->getEmail(),
+        '%%position%%' => link_to($jobeet_job->getPosition(), 'jobeet_job_edit', $jobeet_job),
+        '%%location%%' => strtoupper($jobeet_job->getLocation())
+    ), 'messages') ?>
 </td>

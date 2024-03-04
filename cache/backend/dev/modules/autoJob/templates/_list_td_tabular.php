@@ -1,18 +1,18 @@
 <td class="sf_admin_text sf_admin_list_td_company">
-  <?php echo $jobeet_job->getstrtoupper('c')ompany() ?>
+  <?php echo $jobeet_job->getCompany() ?>
 </td>
 <td class="sf_admin_text sf_admin_list_td_position">
-  <?php echo link_to($jobeet_job->getstrtoupper('p')osition(), 'jobeet_job_edit', $jobeet_job) ?>
+  <?php echo link_to($jobeet_job->getPosition(), 'jobeet_job_edit', $jobeet_job) ?>
 </td>
 <td class="sf_admin_text sf_admin_list_td_location">
-  <?php echo $jobeet_job->getstrtoupper('l')ocation() ?>
+  <?php echo $jobeet_job->getLocation() ?>
 </td>
 <td class="sf_admin_text sf_admin_list_td_url">
-  <?php echo $jobeet_job->getstrtoupper('u')rl() ?>
+  <?php echo $jobeet_job->getUrl() ?>
 </td>
 <td class="sf_admin_boolean sf_admin_list_td_is_activated">
-  <?php echo get_partial('job/list_field_boolean', array('value' => $jobeet_job->getstrtoupper('i')sstrtoupper('a')ctivated())) ?>
+  <?php echo get_partial('job/list_field_boolean', array('value' => $jobeet_job->getisActivated())) ?>
 </td>
 <td class="sf_admin_text sf_admin_list_td_email">
-  <?php echo $jobeet_job->getstrtoupper('e')mail() ?>
+  <?php echo $jobeet_job->getEmail() ?>
 </td>

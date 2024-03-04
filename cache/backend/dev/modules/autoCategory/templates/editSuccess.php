@@ -2,7 +2,7 @@
 <?php include_partial('category/assets') ?>
 
 <div id="sf_admin_container">
-  <h1><?php echo __('Editing Category "%%name%%"', array('%%name%%' => $jobeet_category->getstrtoupper('n')ame()), 'messages') ?></h1>
+  <h1><?php echo __('Editing Category "%%name%%"', array('%%name%%' => $jobeet_category->getName()), 'messages') ?></h1>
 
   <?php include_partial('category/flashes') ?>
 
