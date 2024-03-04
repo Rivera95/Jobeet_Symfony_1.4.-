@@ -41,7 +41,7 @@ abstract class BaseJobeetAffiliateFormFilter extends BaseFormFilterDoctrine
     parent::setup();
   }
 
-  public function addstrtoupper('J')obeetCategoriesListColumnQuery(Doctrine_Query $query, $field, $values)
+  public function addJobeetCategoriesListColumnQuery(Doctrine_Query $query, $field, $values)
   {
     if (!is_array($values))
     {
