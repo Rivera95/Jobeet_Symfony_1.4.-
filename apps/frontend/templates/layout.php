@@ -2,12 +2,9 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <title>
-        <?php if (!include_slot('title')): ?>
-            Jobeet - Your best job board
-        <?php endif; ?>
-    </title>
+    <title><?php if (!include_slot('title')): ?>Jobeet - Your best job board<?php endif; ?></title>
     <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="alternate" type="application/atom+xml" title="Latest Jobs" href="<?php echo url_for('job', array('sf_format' => 'atom'), true) ?>" />
     <?php include_javascripts() ?>
     <?php include_stylesheets() ?>
 </head>
@@ -83,7 +80,9 @@
           </span>
             <ul>
                 <li><a href="">About Jobeet</a></li>
-                <li class="feed"><a href="">Full feed</a></li>
+                <li class="feed">
+                    <a href="<?php echo url_for('job', array('sf_format' => 'atom')) ?>">Full feed</a>
+                </li>
                 <li><a href="">Jobeet API</a></li>
                 <li class="last"><a href="">Affiliates</a></li>
             </ul>

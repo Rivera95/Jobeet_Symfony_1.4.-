@@ -1,48 +1,14 @@
-<?php use_stylesheet('jobs.css') ?>
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Jobeet (<?php echo $category ?>)</title>
+    <subtitle>Latest Jobs</subtitle>
+    <link href="<?php echo url_for('category', array('sf_subject' => $category, 'sf_format' => 'atom'), true) ?>" rel="self" />
+    <link href="<?php echo url_for('category', array('sf_subject' => $category), true) ?>" />
+    <updated><?php echo gmstrftime('%Y-%m-%dT%H:%M:%SZ', $category->getLatestPost()->getDateTimeObject('created_at')->format('U')) ?></updated>
+    <author>
+        <name>Jobeet</name>
+    </author>
+    <id><?php echo sha1(url_for('category', array('sf_subject' => $category), true)) ?></id>
 
-<?php slot('title', sprintf('Jobs in the %s category', $category->getName())) ?>
-
-<div class="category">
-    <div class="feed">
-        <a href="">Feed</a>
-    </div>
-    <h1><?php echo $category ?></h1>
-</div>
-
-<?php include_partial('job/list', array('jobs' => $pager->getResults())) ?>
-
-<?php if ($pager->haveToPaginate()): ?>
-    <div class="pagination">
-        <a href="<?php echo url_for('category', $category) ?>?page=1">
-            <img src="/legacy/images/first.png" alt="First page" title="First page" />
-        </a>
-
-        <a href="<?php echo url_for('category', $category) ?>?page=<?php echo $pager->getPreviousPage() ?>">
-            <img src="/legacy/images/previous.png" alt="Previous page" title="Previous page" />
-        </a>
-
-        <?php foreach ($pager->getLinks() as $page): ?>
-            <?php if ($page == $pager->getPage()): ?>
-                <?php echo $page ?>
-            <?php else: ?>
-                <a href="<?php echo url_for('category', $category) ?>?page=<?php echo $page ?>"><?php echo $page ?></a>
-            <?php endif; ?>
-        <?php endforeach; ?>
-
-        <a href="<?php echo url_for('category', $category) ?>?page=<?php echo $pager->getNextPage() ?>">
-            <img src="/legacy/images/next.png" alt="Next page" title="Next page" />
-        </a>
-
-        <a href="<?php echo url_for('category', $category) ?>?page=<?php echo $pager->getLastPage() ?>">
-            <img src="/legacy/images/last.png" alt="Last page" title="Last page" />
-        </a>
-    </div>
-<?php endif; ?>
-
-<div class="pagination_desc">
-    <strong><?php echo $pager->getNbResults() ?></strong> jobs in this category
-
-    <?php if ($pager->haveToPaginate()): ?>
-        - page <strong><?php echo $pager->getPage() ?>/<?php echo $pager->getLastPage() ?></strong>
-    <?php endif; ?>
-</div>
+    <?php include_partial('job/list', array('jobs' => $pager->getResults())) ?>
+</feed>
