@@ -1,24 +1,18 @@
-<?php use_stylesheets_for_form($form) ?>
-<?php use_javascripts_for_form($form) ?>
+<!-- apps/frontend/modules/affiliate/templates/_form.php -->
+<?php include_stylesheets_for_form($form) ?>
+<?php include_javascripts_for_form($form) ?>
 
-<form action="<?php echo url_for('affiliate/'.($form->getObject()->isNew() ? 'create' : 'update').(!$form->getObject()->isNew() ? '?id='.$form->getObject()->getId() : '')) ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>
-<?php if (!$form->getObject()->isNew()): ?>
-<input type="hidden" name="sf_method" value="put" />
-<?php endif; ?>
-  <table>
+<?php echo form_tag_for($form, 'affiliate') ?>
+<table id="job_form">
     <tfoot>
-      <tr>
+    <tr>
         <td colspan="2">
-          &nbsp;<a href="<?php echo url_for('affiliate/index') ?>">Back to list</a>
-          <?php if (!$form->getObject()->isNew()): ?>
-            &nbsp;<?php echo link_to('Delete', 'affiliate/delete?id='.$form->getObject()->getId(), array('method' => 'delete', 'confirm' => 'Are you sure?')) ?>
-          <?php endif; ?>
-          <input type="submit" value="Save" />
+            <input type="submit" value="Submit" />
         </td>
-      </tr>
+    </tr>
     </tfoot>
     <tbody>
-      <?php echo $form ?>
+    <?php echo $form ?>
     </tbody>
-  </table>
+</table>
 </form>

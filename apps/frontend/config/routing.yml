@@ -46,6 +46,10 @@ affiliate:
     actions: [new, create]
     object_actions: { wait: get }
 
+affiliate_index:
+  url:   /affiliate
+  param: { module: affiliate, action: index }
+
       # default rules
 homepage:
   url:   /
