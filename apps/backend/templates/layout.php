@@ -28,7 +28,7 @@
                     <?= link_to('Categories', 'jobeet_category') ?>
                 </li>
                 <li>
-<!--                    --><?php //= link_to('Users', 'sf_guard_user') ?>
+                    <?= link_to('Users', 'sf_guard_user') ?>
                 </li>
                 <li>
                     <?= link_to('Logout', 'sf_guard_signout') ?>

@@ -55,7 +55,7 @@ abstract class BasesfGuardUserFormFilter extends BaseFormFilterDoctrine
     parent::setup();
   }
 
-  public function addstrtoupper('G')roupsListColumnQuery(Doctrine_Query $query, $field, $values)
+  public function addGroupsListColumnQuery(Doctrine_Query $query, $field, $values)
   {
     if (!is_array($values))
     {
@@ -73,7 +73,7 @@ abstract class BasesfGuardUserFormFilter extends BaseFormFilterDoctrine
     ;
   }
 
-  public function addstrtoupper('P')ermissionsListColumnQuery(Doctrine_Query $query, $field, $values)
+  public function addPermissionsListColumnQuery(Doctrine_Query $query, $field, $values)
   {
     if (!is_array($values))
     {
