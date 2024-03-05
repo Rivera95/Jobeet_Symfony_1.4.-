@@ -24,6 +24,13 @@ test:
 
 all:
   .settings:
+    enabled_modules:
+      - default
+      - sfJobeetAffiliate
+      - sfJobeetApi
+      - sfJobeetCategory
+      - sfJobeetJob
+      - sfJobeetLanguage
     charset: utf-8
     default_culture: it_IT
     i18n: true
