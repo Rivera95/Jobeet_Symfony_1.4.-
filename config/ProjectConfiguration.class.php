@@ -9,6 +9,7 @@ class ProjectConfiguration extends sfProjectConfiguration
   {
     $this->enablePlugins('sfDoctrinePlugin');
     $this->enablePlugins('sfDoctrineGuardPlugin');
+    $this->enablePlugins('sfFormExtraPlugin');
   }
 
     static protected $zendLoaded = false;
