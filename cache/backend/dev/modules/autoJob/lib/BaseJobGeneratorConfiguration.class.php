@@ -241,7 +241,7 @@ abstract class BaseJobGeneratorConfiguration extends sfModelGeneratorConfigurati
    */
   public function getFormClass()
   {
-    return 'PluginBackendJobeetJobForm';
+    return 'BackendJobeetJobForm';
   }
 
   public function hasFilterForm()

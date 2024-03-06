@@ -12,58 +12,31 @@
  */
 abstract class BaseJobeetCategoryForm extends BaseFormDoctrine
 {
-    public function setup()
-    {
-        $this->setWidgets(array(
-            'id'   => new sfWidgetFormInputHidden(),
-            'name' => new sfWidgetFormInputText(),
-            'lang' => new sfWidgetFormInputHidden(),
-            'slug' => new sfWidgetFormInputText(),
-        ));
 
-        $this->setValidators(array(
-            'id'   => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-            'name' => new sfValidatorString(array('max_length' => 255)),
-            'lang' => new sfValidatorChoice(array('choices' => array($this->getObject()->get('lang')), 'empty_value' => $this->getObject()->get('lang'), 'required' => false)),
-            'slug' => new sfValidatorString(array('max_length' => 255, 'required' => false)),
-        ));
+  public function setup()
+  {
+    $this->setWidgets(array(
+      'id'                     => new sfWidgetFormInputHidden(),
+      'created_at'             => new sfWidgetFormDateTime(),
+      'updated_at'             => new sfWidgetFormDateTime(),
+      'jobeet_affiliates_list' => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'JobeetAffiliate')),
+    ));
 
-        $this->validatorSchema->setPostValidator(
-            new sfValidatorDoctrineUnique(array('model' => 'JobeetCategoryTranslation', 'column' => array('slug', 'lang', 'name')))
-        );
+    $this->setValidators(array(
+      'id'                     => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'created_at'             => new sfValidatorDateTime(),
+      'updated_at'             => new sfValidatorDateTime(),
+      'jobeet_affiliates_list' => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'JobeetAffiliate', 'required' => false)),
+    ));
 
-        $this->widgetSchema->setNameFormat('jobeet_category_translation[%s]');
+    $this->widgetSchema->setNameFormat('jobeet_category[%s]');
 
-        $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);
+    $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);
 
-        $this->setupInheritance();
+    $this->setupInheritance();
 
-        parent::setup();
-    }
-//  public function setup()
-//  {
-//    $this->setWidgets(array(
-//      'id'                     => new sfWidgetFormInputHidden(),
-//      'created_at'             => new sfWidgetFormDateTime(),
-//      'updated_at'             => new sfWidgetFormDateTime(),
-//      'jobeet_affiliates_list' => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'JobeetAffiliate')),
-//    ));
-//
-//    $this->setValidators(array(
-//      'id'                     => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-//      'created_at'             => new sfValidatorDateTime(),
-//      'updated_at'             => new sfValidatorDateTime(),
-//      'jobeet_affiliates_list' => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'JobeetAffiliate', 'required' => false)),
-//    ));
-//
-//    $this->widgetSchema->setNameFormat('jobeet_category[%s]');
-//
-//    $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);
-//
-//    $this->setupInheritance();
-//
-//    parent::setup();
-//  }
+    parent::setup();
+  }
 
   public function getModelName()
   {
