@@ -15,6 +15,7 @@ class sfJobeetCategoryActions extends sfActions
   *
   * @param sfRequest $request A request object
   */
+
     public function executeShow(sfWebRequest $request)
     {
         $this->category = $this->getRoute()->getObject();

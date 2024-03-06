@@ -45,3 +45,10 @@ all:
 
     # Enable the database manager
     use_database:           true
+
+cache:
+  .settings:
+    error_reporting: <?php echo (E_ALL | E_STRICT)."\n" ?>
+    web_debug:       true
+    cache:           true
+    etag:            false
